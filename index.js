@@ -23,6 +23,6 @@ app.use('/api/task', require('./routes/tareas') );
 
 
 // arrancar la app
-app.listen( PORT,  ()=> {
+app.listen( port, '0.0.0.0',  ()=> {
     console.log( `El servidor esta arriba! en el puero ${PORT}` )
 } )
