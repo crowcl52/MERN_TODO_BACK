@@ -15,6 +15,13 @@ app.use( express.json({extended:true}) )
 // puerto de la app
 const port = process.env.PORT || 8080;
 
+// create normal resp
+app.get('/api', (req, res) =>{
+    res.send(`
+    <h1 style="text-align:center; padding: 2rem 3rem;" > API MEARN Todo arriba </h1>
+    `)
+} )
+
 // Importar rutas
 app.use('/api/usuarios', require('./routes/usuarios') );
 app.use('/api/auth', require('./routes/auth') );
